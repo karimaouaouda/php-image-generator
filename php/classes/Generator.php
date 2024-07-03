@@ -14,11 +14,11 @@ class IMGGenerator{
     }
 
 
-    private function setup(){
+    private function setup()
+    {
         $color = new Color();
         $color = $color->random();
         $mycolor = imagecolorallocate($this->image , $color["red"] , $color["green"] , $color["blue"]);
         imagefill($this->image , 0 , 0 , $mycolor);
-        return $mycolor;
     }
 }
